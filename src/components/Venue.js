@@ -195,7 +195,7 @@ const Venue = () => {
           <iframe src="https://www.google.com/maps/place/VIT+-+%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2/@23.0774796,76.848738,17z/data=!3m1!4b1!4m6!3m5!1s0x397ce9ceaaaaaaab:0xa224b6b82b421f83!8m2!3d23.0774796!4d76.8513183!16s%2Fg%2F11hbgkdndx?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="400" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
          
 
-            {/* Transportation Options */}
+            {/* Transportation  */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <h3 className="font-display font-bold text-xl text-gray-900 mb-6">Getting There</h3>
               <div className="space-y-4">
