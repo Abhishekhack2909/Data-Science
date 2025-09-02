@@ -1,0 +1,263 @@
+import React from 'react';
+
+const Footer = () => {
+  const footerLinks = {
+    event: [
+      { name: 'About Summit', href: '#about' },
+      { name: 'Speakers', href: '#speakers' },
+      { name: 'Schedule', href: '#schedule' },
+      { name: 'Venue', href: '#venue' },
+      { name: 'Registration', href: '#register' }
+    ],
+    support: [
+      { name: 'Contact Us', href: '#' },
+      { name: 'FAQ', href: '#' },
+      { name: 'Travel Guide', href: '#' },
+      { name: 'Accessibility', href: '#' },
+      { name: 'Code of Conduct', href: '#' }
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '#' },
+      { name: 'Terms of Service', href: '#' },
+      { name: 'Cookie Policy', href: '#' },
+      { name: 'Refund Policy', href: '#' },
+      { name: 'Media Kit', href: '#' }
+    ]
+  };
+
+  const socialLinks = [
+    {
+      name: 'Twitter',
+      href: '#',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+        </svg>
+      )
+    },
+    {
+      name: 'LinkedIn',
+      href: '#',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      )
+    },
+    {
+      name: 'Instagram',
+      href: '#',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.618 5.367 11.986 11.988 11.986s11.987-5.368 11.987-11.986C24.014 5.367 18.635.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.926 3.708 13.775 3.708 12.478s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.213c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.49 0-.928-.175-1.297-.49-.368-.315-.49-.753-.49-1.243 0-.49.122-.928.49-1.243.369-.368.807-.49 1.297-.49s.928.122 1.297.49c.315.315.49.753.49 1.243 0 .49-.175.928-.49 1.243-.369.315-.807.49-1.297.49z"/>
+        </svg>
+      )
+    },
+    {
+      name: 'YouTube',
+      href: '#',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      )
+    },
+    {
+      name: 'Discord',
+      href: '#',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+        </svg>
+      )
+    }
+  ];
+
+  const sponsors = [
+    { name: 'Google AI', logo: 'GA' },
+    { name: 'Microsoft', logo: 'MS' },
+    { name: 'Amazon Web Services', logo: 'AWS' },
+    { name: 'NVIDIA', logo: 'NV' },
+    { name: 'OpenAI', logo: 'OAI' },
+    { name: 'Meta AI', logo: 'MA' }
+  ];
+
+  return (
+    <footer 
+      className="relative overflow-hidden mt-8 bg-enhanced"
+      style={{
+        backgroundImage: `url('/spiderman.jpeg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+
+      {/* Background decorations */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
+        
+        {/* Additional floating elements */}
+        <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
+      </div>
+
+      <div className="container-custom relative z-10">
+        {/* Main Footer Content */}
+        <div className="py-16 border-b border-white/10">
+          <div className="grid lg:grid-cols-4 gap-12">
+            {/* Brand Section */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">E</span>
+                </div>
+                <span className="font-display font-bold text-2xl text-white">
+                  DataSci Summit
+                </span>
+              </div>
+              <p className="text-white/70 leading-relaxed mb-6">
+                The premier gathering for data scientists and AI researchers. Join us for three days of 
+                cutting-edge insights, hands-on learning, and professional networking.
+              </p>
+              
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                    aria-label={social.name}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-display font-bold text-lg text-white mb-6">Event</h3>
+              <ul className="space-y-3">
+                {footerLinks.event.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support Links */}
+            <div>
+              <h3 className="font-display font-bold text-lg text-white mb-6">Support</h3>
+              <ul className="space-y-3">
+                {footerLinks.support.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal & Newsletter */}
+            <div>
+              <h3 className="font-display font-bold text-lg text-white mb-6">Stay Updated</h3>
+              <p className="text-white/70 mb-4">
+                Get the latest updates on speakers, workshop materials, and exclusive data science resources.
+              </p>
+              
+              {/* Newsletter Signup */}
+              <div className="flex flex-col space-y-3 mb-6">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-4 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/50 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-colors"
+                />
+                <button className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 transform hover:scale-105">
+                  Subscribe
+                </button>
+              </div>
+
+              {/* Legal Links */}
+              <ul className="space-y-2">
+                {footerLinks.legal.slice(0, 3).map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-white/50 hover:text-white/70 text-sm transition-colors duration-300"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Sponsors Section */}
+        <div className="py-12 border-b border-white/10">
+          <h3 className="font-display font-bold text-xl text-white text-center mb-8">
+            Proudly Supported By
+          </h3>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-8">
+            {sponsors.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="flex items-center justify-center group cursor-pointer"
+              >
+                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all duration-300 transform group-hover:scale-110">
+                  <span className="font-bold text-lg">{sponsor.logo}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-white/50 text-sm">
+              © 2025 Data Science Summit. All rights reserved.
+            </div>
+            
+            <div className="flex items-center space-x-6 text-white/50 text-sm">
+              <span>Made with ❤️ for data scientists everywhere</span>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
+                <span>Live Event</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll to Top Button */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
+          aria-label="Scroll to top"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
