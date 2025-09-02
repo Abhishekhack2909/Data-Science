@@ -67,7 +67,7 @@ const Hero = () => {
           {/* Event Badge */}
           <div className="inline-flex items-center px-6 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 mb-8 animate-bounce-slow">
             <span className="w-2 h-2 bg-accent-400 rounded-full mr-3 animate-pulse"></span>
-            <span className="text-white/90 font-medium">March 20-22, 2025 • University Tech Hub</span>
+            <span className="text-white/90 font-medium">March 20-22, 2025 , VIT Bhopal University • </span>
           </div>
 
           {/* Main Title */}
