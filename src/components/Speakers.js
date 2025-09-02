@@ -10,7 +10,7 @@ const Speakers = () => {
       bio: "Leading researcher in ethical AI with 15+ years experience in ML model development and deployment."
     },
     {
-      name: "monkey D Luffy",
+      name: "Monkey D Luffy",
       title: "Stanford AI Research Lab",
       specialty: "Deep Learning & Neural Networks",
       image: "/one-piece-luffy-gear-5-3840x4163-10747.jpg",
