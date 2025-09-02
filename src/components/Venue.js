@@ -136,7 +136,7 @@ const Venue = () => {
           </div>
           <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-6 text-shadow">
             Modern Venue in the
-            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">University Tech Hub</span>
+            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">VIT Bhopal University</span>
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow">
             Join us at the state-of-the-art University Tech Hub, a cutting-edge facility 
@@ -160,8 +160,8 @@ const Venue = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="font-display font-bold text-2xl mb-2">University Tech Hub</h3>
-                <p className="text-white/90">123 Innovation Drive, Tech Campus, CA 94301</p>
+                <h3 className="font-display font-bold text-2xl mb-2">VIT Bhopal University</h3>
+                <p className="text-white/90">Kothri Kalan, Sehore, Madhya Pradesh 466114</p>
               </div>
               
               {/* Play button overlay */}
