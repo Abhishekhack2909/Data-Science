@@ -3,24 +3,24 @@ import React from 'react';
 const Speakers = () => {
   const speakers = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Tanjiro Kamado",
       title: "Chief Data Scientist at TechCorp",
       specialty: "Machine Learning & AI Ethics",
       image: "/demon-slayer-3840x5270-10716.jpg",
       bio: "Leading researcher in ethical AI with 15+ years experience in ML model development and deployment."
     },
     {
-      name: "Prof. Michael Rodriguez",
+      name: "monkey D Luffy",
       title: "Stanford AI Research Lab",
       specialty: "Deep Learning & Neural Networks",
       image: "/one-piece-luffy-gear-5-3840x4163-10747.jpg",
       bio: "Pioneer in deep learning architectures with groundbreaking research in computer vision and NLP."
     },
     {
-      name: "Dr. Emily Watson",
+      name: "spider Man",
       title: "Senior ML Engineer at Google",
       specialty: "MLOps & Production Systems",
-      image: "/comic-books-bg.jpg",
+      image: "/spiderman2.jpg",
       bio: "Expert in scaling ML systems and building robust data pipelines for enterprise applications."
     }
   ];
