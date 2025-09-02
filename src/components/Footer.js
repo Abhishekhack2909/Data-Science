@@ -166,7 +166,24 @@ const Footer = () => {
           </div>
         </div>
 
-        
+        {/* Sponsors Section */}
+        <div className="py-12 border-b border-white/10">
+          <h3 className="font-display font-bold text-xl text-white text-center mb-8">
+            Proudly Supported By
+          </h3>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-8">
+            {sponsors.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="flex items-center justify-center group cursor-pointer"
+              >
+                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all duration-300 transform group-hover:scale-110">
+                  <span className="font-bold text-lg">{sponsor.logo}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Bottom Bar */}
         <div className="py-8">

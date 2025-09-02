@@ -192,22 +192,8 @@ const Venue = () => {
           </div>
 
           {/* Map & Transportation */}
-          <div>
-            {/* Interactive Map Placeholder */}
-            <div className="h-64 bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl mb-8 relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-600 font-medium">Interactive Map</p>
-                  <p className="text-gray-500 text-sm">Click to view full directions</p>
-                </div>
-              </div>
-            </div>
+          <iframe src="https://www.google.com/maps/place/VIT+-+%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2/@23.0774796,76.848738,17z/data=!3m1!4b1!4m6!3m5!1s0x397ce9ceaaaaaaab:0xa224b6b82b421f83!8m2!3d23.0774796!4d76.8513183!16s%2Fg%2F11hbgkdndx?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="400" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
+         
 
             {/* Transportation Options */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
