@@ -17,7 +17,7 @@ const Speakers = () => {
       bio: "Pioneer in deep learning architectures with groundbreaking research in computer vision and NLP."
     },
     {
-      name: "spider Man",
+      name: "Spider Man",
       title: "Senior ML Engineer at Google",
       specialty: "MLOps & Production Systems",
       image: "/spiderman2.jpg",
