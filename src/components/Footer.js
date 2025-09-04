@@ -37,6 +37,15 @@ const Footer = () => {
     }  
   ];
 
+  const sponsors = [
+    { name: 'VIT Bhopal', logo: 'VIT' },
+    { name: 'Microsoft', logo: 'MS' },
+    { name: 'Google', logo: 'G' },
+    { name: 'Amazon', logo: 'AWS' },
+    { name: 'IBM', logo: 'IBM' },
+    { name: 'Meta', logo: 'META' }
+  ];
+
   
 
   return (

@@ -59,31 +59,33 @@ const Hero = () => {
       <div className="container-custom relative z-10 text-center">
         <div className="animate-fade-in">
           {/* Promotional Banner */}
-          <div className="inline-flex items-center px-6 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 mb-4 animate-pulse">
-            <span className="text-accent-400 text-sm font-semibold">🚀 Early Bird Registration - Save 30%!</span>
-            <span className="ml-2 text-white/90 text-sm font-medium animate-bounce">Limited Time Offer</span>
+          <div className="inline-flex items-center px-8 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 mb-6 animate-pulse shadow-2xl">
+            <span className="text-accent-400 text-sm font-bold drop-shadow-lg">🚀 Early Bird Registration - Save 30%!</span>
+            <span className="ml-3 text-white text-sm font-semibold animate-bounce drop-shadow-lg">Limited Time Offer</span>
           </div>
 
           {/* Event Badge */}
-          <div className="inline-flex items-center px-6 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 mb-8 animate-bounce-slow">
-            <span className="w-2 h-2 bg-accent-400 rounded-full mr-3 animate-pulse"></span>
-            <span className="text-white/90 font-medium">March 20-22, 2025 • VIT Bhopal University</span>
+          <div className="inline-flex items-center px-8 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 mb-10 animate-bounce-slow shadow-2xl">
+            <span className="w-3 h-3 bg-accent-400 rounded-full mr-4 animate-pulse shadow-lg"></span>
+            <span className="text-white font-semibold drop-shadow-lg">March 20-22, 2025 • VIT Bhopal University</span>
           </div>
 
           {/* Main Title */}
-          <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl text-white mb-6 text-shadow animate-slide-up">
-            <span className="block">DATA</span>
-            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent animate-gradient bg-300%">
+          <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl text-white mb-8 animate-slide-up" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.9)' }}>
+            <span className="block drop-shadow-2xl">DATA</span>
+            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent animate-gradient bg-300% drop-shadow-2xl">
               SCIENCE
             </span>
-            <span className="block">SUMMIT</span>
+            <span className="block drop-shadow-2xl">SUMMIT</span>
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Where data meets innovation, insights drive decisions, and the future of AI is shaped.
-            Join the ultimate gathering of data scientists and ML engineers.
-          </p>
+          <div className="bg-black/70 backdrop-blur-md rounded-2xl px-8 py-6 mb-12 max-w-4xl mx-auto shadow-2xl border border-white/20 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl md:text-2xl text-white font-medium leading-relaxed drop-shadow-lg">
+              Where data meets innovation, insights drive decisions, and the future of AI is shaped.
+              Join the ultimate gathering of data scientists and ML engineers.
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
@@ -106,17 +108,17 @@ const Hero = () => {
           </div>
 
           {/* Countdown Timer */}
-          <div className="glass-effect p-8 rounded-3xl max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.6s' }}>
-            <h3 className="text-white/90 text-lg font-semibold mb-6">Event Starts In</h3>
+          <div className="bg-black/80 backdrop-blur-md p-10 rounded-3xl max-w-4xl mx-auto animate-slide-up shadow-2xl border border-white/30" style={{ animationDelay: '0.6s' }}>
+            <h3 className="text-white text-xl font-bold mb-8 drop-shadow-lg">Event Starts In</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {Object.entries(timeLeft).map(([unit, value]) => (
                 <div key={unit} className="text-center">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 mb-2 border border-white/20">
-                    <span className="text-3xl md:text-4xl font-bold text-white font-display">
+                  <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 mb-3 border border-white/30 shadow-xl">
+                    <span className="text-4xl md:text-5xl font-bold text-white font-display drop-shadow-lg">
                       {value.toString().padStart(2, '0')}
                     </span>
                   </div>
-                  <span className="text-white/70 text-sm uppercase tracking-wider font-medium">
+                  <span className="text-white text-sm uppercase tracking-wider font-semibold drop-shadow-lg">
                     {unit}
                   </span>
                 </div>

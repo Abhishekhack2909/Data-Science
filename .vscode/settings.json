@@ -1,2 +1,4 @@
 {
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "javascript.preferences.includePackageJsonAutoImports": "off"
 }

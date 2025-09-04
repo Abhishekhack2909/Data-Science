@@ -85,28 +85,28 @@ const Venue = () => {
       name: "Tech Hub Grand Hotel",
       distance: "2 min walk",
       rating: 5,
-      price: "$299/night",
+      price: "₹24,999/night",
       features: ["Luxury suites", "Spa", "24/7 room service"]
     },
     {
       name: "Campus Inn & Suites",
       distance: "5 min walk",
       rating: 4,
-      price: "$179/night",
+      price: "₹14,999/night",
       features: ["Business center", "Gym", "Restaurant"]
     },
     {
       name: "Student Lodge",
       distance: "10 min walk",
       rating: 3,
-      price: "$89/night",
+      price: "₹7,499/night",
       features: ["Free WiFi", "Breakfast", "Study rooms"]
     }
   ];
 
   return (
-    <section 
-      id="venue" 
+    <section
+      id="venue"
       className="section-padding relative overflow-hidden mt-8 bg-enhanced"
       style={{
         backgroundImage: `url('/tanjiro-kamado-5120x2880-23649.jpg')`,
@@ -119,13 +119,13 @@ const Venue = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
-        
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{ animationDelay: '2s' }}></div>
+
         {/* Additional floating elements */}
-        <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
+        <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{ animationDelay: '2.5s' }}></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -139,7 +139,7 @@ const Venue = () => {
             <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">VIT Bhopal University</span>
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow">
-            Join us at the state-of-the-art University Tech Hub, a cutting-edge facility 
+            Join us at the state-of-the-art University Tech Hub, a cutting-edge facility
             designed for innovation and learning in the heart of the campus.
           </p>
         </div>
@@ -147,7 +147,7 @@ const Venue = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Venue Image & Info */}
           <div>
-            <div 
+            <div
               className="h-96 rounded-3xl bg-gradient-to-br from-primary-400 to-secondary-400 mb-8 relative overflow-hidden group"
               style={{
                 backgroundImage: `
@@ -163,12 +163,12 @@ const Venue = () => {
                 <h3 className="font-display font-bold text-2xl mb-2">VIT Bhopal University</h3>
                 <p className="text-white/90">Kothri Kalan, Sehore, Madhya Pradesh 466114</p>
               </div>
-              
+
               {/* Play button overlay */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors">
                   <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
+                    <path d="M8 5v14l11-7z" />
                   </svg>
                 </button>
               </div>
@@ -192,10 +192,18 @@ const Venue = () => {
           </div>
 
           {/* Map & Transportation */}
-          <iframe src="https://www.google.com/maps/place/VIT+-+%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2/@23.0774796,76.848738,17z/data=!3m1!4b1!4m6!3m5!1s0x397ce9ceaaaaaaab:0xa224b6b82b421f83!8m2!3d23.0774796!4d76.8513183!16s%2Fg%2F11hbgkdndx?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="400" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
-         
+          <div>
+            <iframe
+              src="https://www.google.com/maps/place/VIT+-+%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2/@23.0774796,76.848738,17z/data=!3m1!4b1!4m6!3m5!1s0x397ce9ceaaaaaaab:0xa224b6b82b421f83!8m2!3d23.0774796!4d76.8513183!16s%2Fg%2F11hbgkdndx?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-2xl mb-8"
+            ></iframe>
 
-            {/* Transportation  */}
+            {/* Transportation */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <h3 className="font-display font-bold text-xl text-gray-900 mb-6">Getting There</h3>
               <div className="space-y-4">
@@ -217,7 +225,7 @@ const Venue = () => {
 
         {/* Nearby Hotels */}
         <div className="mb-16">
-          <h3 className="font-display font-bold text-3xl text-gray-900 text-center mb-12">
+          <h3 className="font-display font-bold text-3xl text-white text-center mb-12 text-shadow">
             Recommended Accommodations
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -238,7 +246,7 @@ const Venue = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-primary-600 font-semibold">{hotel.distance}</span>
                   <span className="text-2xl font-bold text-gray-900">{hotel.price}</span>
@@ -269,7 +277,7 @@ const Venue = () => {
           <div className="relative z-10">
             <h3 className="font-display font-bold text-3xl mb-6">Need Help Planning Your Visit?</h3>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our event support team is here to assist with travel arrangements, 
+              Our event support team is here to assist with travel arrangements,
               accommodations, and any accessibility requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -291,13 +299,13 @@ const Venue = () => {
               </button>
             </div>
           </div>
-          
+
           {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full"></div>
           <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/10 rounded-full"></div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

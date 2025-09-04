@@ -67,18 +67,20 @@ const About = () => {
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white font-medium mb-6">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 text-white font-medium mb-6 shadow-2xl">
             <span className="w-2 h-2 bg-accent-400 rounded-full mr-2"></span>
             About the Event
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-6 text-shadow">
-            Where Data
-            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">Meets Innovation</span>
+          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-6" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)'}}>
+            <span className="bg-black/60 px-4 py-2 rounded-2xl">Where Data</span>
+            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent mt-2" style={{textShadow: 'none'}}>Meets Innovation</span>
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow">
+          <div className="bg-black/70 backdrop-blur-md rounded-2xl p-6 max-w-3xl mx-auto mb-6">
+            <p className="text-xl text-white leading-relaxed">
             The Data Science Summit is the premier gathering for data scientists, ML engineers, and AI researchers. 
             Join us for three days of cutting-edge insights, hands-on workshops, and networking with industry leaders.
-          </p>
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">

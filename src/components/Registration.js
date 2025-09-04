@@ -23,8 +23,8 @@ const Registration = () => {
     {
       id: 'early-bird',
       name: 'Early Bird',
-      price: '$199',
-      originalPrice: '$299',
+      price: '₹16,499',
+      originalPrice: '₹24,999',
       features: [
         'All 3 days access',
         'Welcome kit',
@@ -37,7 +37,7 @@ const Registration = () => {
     {
       id: 'standard',
       name: 'Standard',
-      price: '$299',
+      price: '₹24,999',
       originalPrice: null,
       features: [
         'All 3 days access',
@@ -52,7 +52,7 @@ const Registration = () => {
     {
       id: 'premium',
       name: 'Premium',
-      price: '$499',
+      price: '₹41,499',
       originalPrice: null,
       features: [
         'All 3 days access',
@@ -420,7 +420,7 @@ const Registration = () => {
                         Processing Registration...
                       </span>
                     ) : (
-                      `Register Now - ${ticketTypes.find(t => t.id === formData.ticketType)?.price || '$399'}`
+                      `Register Now - ${ticketTypes.find(t => t.id === formData.ticketType)?.price || '₹33,299'}`
                     )}
                   </button>
                 </div>
