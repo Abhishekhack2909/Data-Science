@@ -1,5 +1,4 @@
 import React from 'react';
-
 const About = () => {
   const features = [
     {
@@ -39,7 +38,6 @@ const About = () => {
       description: "Interactive sessions with real-world datasets"
     }
   ];
-
   return (
     <section 
       id="about" 
@@ -51,20 +49,14 @@ const About = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-
-      
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Additional floating elements */}
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
       </div>
-
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 text-white font-medium mb-6 shadow-2xl">
@@ -82,7 +74,6 @@ const About = () => {
             </p>
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {features.map((feature, index) => (
             <div 
@@ -101,7 +92,6 @@ const About = () => {
             </div>
           ))}
         </div>
-
         <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="relative z-10">
@@ -121,8 +111,6 @@ const About = () => {
               </button>
             </div>
           </div>
-          
-          {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full"></div>
           <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/10 rounded-full"></div>
         </div>
@@ -130,5 +118,4 @@ const About = () => {
     </section>
   );
 };
-
 export default About;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Speakers = () => {
   const speakers = [
     {
@@ -24,7 +23,6 @@ const Speakers = () => {
       bio: "Expert in scaling ML systems and building robust data pipelines for enterprise applications."
     }
   ];
-
   return (
     <section 
       id="speakers" 
@@ -36,19 +34,14 @@ const Speakers = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Additional floating elements */}
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
       </div>
-
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 text-white font-medium mb-6 shadow-2xl">
@@ -66,14 +59,12 @@ const Speakers = () => {
             </p>
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {speakers.map((speaker, index) => (
             <div 
               key={index}
               className="group bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 card-hover border border-gray-100 hover:border-primary-200 hover:bg-white"
             >
-              {/* Speaker Image */}
               <div className="relative h-64 overflow-hidden">
                 <div 
                   className="w-full h-full bg-gradient-to-br from-primary-400 to-secondary-400 group-hover:scale-110 transition-transform duration-500"
@@ -85,8 +76,6 @@ const Speakers = () => {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
-
-              {/* Speaker Info */}
               <div className="p-8">
                 <div className="mb-4">
                   <h3 className="font-display font-bold text-xl text-gray-900 mb-2">
@@ -99,11 +88,9 @@ const Speakers = () => {
                     {speaker.specialty}
                   </p>
                 </div>
-                
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {speaker.bio}
                 </p>
-
                 <button className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3 px-6 rounded-full hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 transform hover:scale-105">
                   View Profile
                 </button>
@@ -111,8 +98,6 @@ const Speakers = () => {
             </div>
           ))}
         </div>
-
-        {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="glass-effect p-8 rounded-3xl max-w-2xl mx-auto border border-gray-200">
             <h3 className="font-display font-bold text-2xl text-gray-900 mb-4">
@@ -130,5 +115,4 @@ const Speakers = () => {
     </section>
   );
 };
-
 export default Speakers;

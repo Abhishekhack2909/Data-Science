@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 50;
       setScrolled(isScrolled);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -22,7 +18,6 @@ const Navbar = () => {
     { name: 'Register', href: '#register' },
     { name: 'Venue', href: '#venue' },
   ];
-
   return (
     <nav className={`fixed w-full z-[60] transition-all duration-300 ${
         scrolled 
@@ -31,7 +26,6 @@ const Navbar = () => {
       }`}>
         <div className="container-custom">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">DS</span>
@@ -42,8 +36,6 @@ const Navbar = () => {
               DataSci Summit
             </span>
           </div>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -62,8 +54,6 @@ const Navbar = () => {
               Register Now
             </button>
           </div>
-
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -81,8 +71,6 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden z-[70] ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
@@ -108,5 +96,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Footer = () => {
   const footerLinks = {
     event: [
@@ -24,7 +23,6 @@ const Footer = () => {
       { name: 'Media Kit', href: '#' }
     ]
   };
-
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -36,7 +34,6 @@ const Footer = () => {
       )
     }  
   ];
-
   const sponsors = [
     { name: 'VIT Bhopal', logo: 'VIT' },
     { name: 'Microsoft', logo: 'MS' },
@@ -45,9 +42,6 @@ const Footer = () => {
     { name: 'IBM', logo: 'IBM' },
     { name: 'Meta', logo: 'META' }
   ];
-
-  
-
   return (
     <footer 
       className="relative overflow-hidden mt-8 bg-enhanced"
@@ -58,39 +52,32 @@ const Footer = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-
-      {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Additional floating elements */}
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
       </div>
-
       <div className="container-custom relative z-10">
-        {/* Main Footer Content */}
         <div className="py-16 border-b border-white/10">
           <div className="grid lg:grid-cols-4 gap-12">
-            {/* Brand Section */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">E</span>
+                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-xl drop-shadow-lg">E</span>
                 </div>
-                <span className="font-display font-bold text-2xl text-white">
+                <span className="font-display font-bold text-2xl text-white drop-shadow-lg">
                   DataSci Summit
                 </span>
               </div>
-              <p className="text-white/70 leading-relaxed mb-6">
-                The premier gathering for data scientists and AI researchers. Join us for three days of 
-                cutting-edge insights, hands-on learning, and professional networking.
-              </p>
-              
-              {/* Social Links */}
+              <div className="bg-black/60 backdrop-blur-md rounded-xl px-6 py-4 mb-6 border border-white/20 shadow-lg">
+                <p className="text-white font-medium leading-relaxed drop-shadow-lg">
+                  The premier gathering for data scientists and AI researchers. Join us for three days of 
+                  cutting-edge insights, hands-on learning, and professional networking.
+                </p>
+              </div>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
@@ -104,10 +91,8 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-
-            {/* Quick Links */}
             <div>
-              <h3 className="font-display font-bold text-lg text-white mb-6">Event</h3>
+              <h3 className="font-display font-bold text-lg text-white mb-6 drop-shadow-lg">Event</h3>
               <ul className="space-y-3">
                 {footerLinks.event.map((link) => (
                   <li key={link.name}>
@@ -121,10 +106,8 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-
-            {/* Support Links */}
             <div>
-              <h3 className="font-display font-bold text-lg text-white mb-6">Support</h3>
+              <h3 className="font-display font-bold text-lg text-white mb-6 drop-shadow-lg">Support</h3>
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
@@ -138,15 +121,13 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-
-            {/* Legal & Newsletter */}
             <div>
-              <h3 className="font-display font-bold text-lg text-white mb-6">Stay Updated</h3>
-              <p className="text-white/70 mb-4">
-                Get the latest updates on speakers, workshop materials, and exclusive data science resources.
-              </p>
-              
-              {/* Newsletter Signup */}
+              <h3 className="font-display font-bold text-lg text-white mb-6 drop-shadow-lg">Stay Updated</h3>
+              <div className="bg-black/60 backdrop-blur-md rounded-xl px-6 py-4 mb-4 border border-white/20 shadow-lg">
+                <p className="text-white font-medium drop-shadow-lg">
+                  Get the latest updates on speakers, workshop materials, and exclusive data science resources.
+                </p>
+              </div>
               <div className="flex flex-col space-y-3 mb-6">
                 <input
                   type="email"
@@ -157,8 +138,6 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
-
-              {/* Legal Links */}
               <ul className="space-y-2">
                 {footerLinks.legal.slice(0, 3).map((link) => (
                   <li key={link.name}>
@@ -174,8 +153,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Sponsors Section */}
         <div className="py-12 border-b border-white/10">
           <h3 className="font-display font-bold text-xl text-white text-center mb-8">
             Proudly Supported By
@@ -193,14 +170,11 @@ const Footer = () => {
             ))}
           </div>
         </div>
-
-        {/* Bottom Bar */}
         <div className="py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/50 text-sm">
               © 2025 Data Science Summit. All rights reserved.
             </div>
-            
             <div className="flex items-center space-x-6 text-white/50 text-sm">
               <span>Made with ❤️ by Abhishek Tripathi for data scientists everywhere</span>
               <div className="flex items-center space-x-2">
@@ -210,8 +184,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Scroll to Top Button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
@@ -225,5 +197,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

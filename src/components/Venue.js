@@ -115,37 +115,32 @@ const Venue = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{ animationDelay: '2s' }}></div>
-
-        {/* Additional floating elements */}
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
         <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
         <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{ animationDelay: '2.5s' }}></div>
       </div>
-
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white font-medium mb-6">
-            <span className="w-2 h-2 bg-accent-400 rounded-full mr-2"></span>
+          <div className="inline-flex items-center px-8 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 text-white font-semibold mb-8 shadow-2xl">
+            <span className="w-3 h-3 bg-accent-400 rounded-full mr-4 animate-pulse shadow-lg"></span>
             Venue & Location
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-6 text-shadow">
-            Modern Venue in the
-            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">VIT Bhopal University</span>
+          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-8" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.9)' }}>
+            <span className="drop-shadow-2xl">Modern Venue in the</span>
+            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent drop-shadow-2xl">VIT Bhopal University</span>
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow">
-            Join us at the state-of-the-art University Tech Hub, a cutting-edge facility
-            designed for innovation and learning in the heart of the campus.
-          </p>
+          <div className="bg-black/70 backdrop-blur-md rounded-2xl px-8 py-6 mb-12 max-w-4xl mx-auto shadow-2xl border border-white/20">
+            <p className="text-xl text-white font-medium leading-relaxed drop-shadow-lg">
+              Join us at the state-of-the-art University Tech Hub, a cutting-edge facility
+              designed for innovation and learning in the heart of the campus.
+            </p>
+          </div>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Venue Image & Info */}
           <div>
             <div
               className="h-96 rounded-3xl bg-gradient-to-br from-primary-400 to-secondary-400 mb-8 relative overflow-hidden group"
@@ -163,8 +158,6 @@ const Venue = () => {
                 <h3 className="font-display font-bold text-2xl mb-2">VIT Bhopal University</h3>
                 <p className="text-white/90">Kothri Kalan, Sehore, Madhya Pradesh 466114</p>
               </div>
-
-              {/* Play button overlay */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors">
                   <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -173,7 +166,6 @@ const Venue = () => {
                 </button>
               </div>
             </div>
-
             <div className="grid grid-cols-2 gap-4">
               {venueFeatures.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
@@ -190,20 +182,17 @@ const Venue = () => {
               ))}
             </div>
           </div>
-
-          {/* Map & Transportation */}
           <div>
             <iframe
-              src="https://www.google.com/maps/place/VIT+-+%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2/@23.0774796,76.848738,17z/data=!3m1!4b1!4m6!3m5!1s0x397ce9ceaaaaaaab:0xa224b6b82b421f83!8m2!3d23.0774796!4d76.8513183!16s%2Fg%2F11hbgkdndx?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.0234567890123!2d76.8370213!3d23.0716475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397ce9ceaaaaaaab%3A0xa224b6b82b421f83!2sVIT%20-%20%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2!5e0!3m2!1sen!2sin!4v1693123456789!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
-              className="rounded-2xl mb-8"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-2xl mb-8 shadow-lg"
             ></iframe>
-
-            {/* Transportation */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <h3 className="font-display font-bold text-xl text-gray-900 mb-6">Getting There</h3>
               <div className="space-y-4">
@@ -222,8 +211,6 @@ const Venue = () => {
             </div>
           </div>
         </div>
-
-        {/* Nearby Hotels */}
         <div className="mb-16">
           <h3 className="font-display font-bold text-3xl text-white text-center mb-12 text-shadow">
             Recommended Accommodations
@@ -246,12 +233,10 @@ const Venue = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-primary-600 font-semibold">{hotel.distance}</span>
                   <span className="text-2xl font-bold text-gray-900">{hotel.price}</span>
                 </div>
-
                 <ul className="space-y-2 mb-6">
                   {hotel.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
@@ -262,7 +247,6 @@ const Venue = () => {
                     </li>
                   ))}
                 </ul>
-
                 <button className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3 px-6 rounded-full hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 transform hover:scale-105">
                   Book Now
                 </button>
@@ -270,8 +254,6 @@ const Venue = () => {
             ))}
           </div>
         </div>
-
-        {/* Contact Information */}
         <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="relative z-10">
@@ -299,13 +281,11 @@ const Venue = () => {
               </button>
             </div>
           </div>
-
-          {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full"></div>
           <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/10 rounded-full"></div>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 

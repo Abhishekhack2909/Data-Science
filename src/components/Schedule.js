@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-
 const Schedule = () => {
   const [activeDay, setActiveDay] = useState(0);
   const [expandedSession, setExpandedSession] = useState(null);
-
   const schedule = [
     {
       day: "Day 1",
@@ -202,7 +200,6 @@ const Schedule = () => {
       ]
     }
   ];
-
   const getSessionTypeColor = (type) => {
     const colors = {
       keynote: 'from-primary-500 to-primary-600',
@@ -214,7 +211,6 @@ const Schedule = () => {
     };
     return colors[type] || 'from-gray-500 to-gray-600';
   };
-
   const getSessionIcon = (type) => {
     const icons = {
       keynote: (
@@ -250,7 +246,6 @@ const Schedule = () => {
     };
     return icons[type] || icons.talk;
   };
-
   return (
     <section 
       id="schedule" 
@@ -262,38 +257,33 @@ const Schedule = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-
-      {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Additional floating elements */}
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
       </div>
-
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium mb-6">
-            <span className="w-2 h-2 bg-accent-400 rounded-full mr-2"></span>
+          <div className="inline-flex items-center px-8 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 text-white font-semibold mb-8 shadow-2xl">
+            <span className="w-3 h-3 bg-accent-400 rounded-full mr-4 animate-pulse shadow-lg"></span>
             Event Schedule
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-6">
-            Three Days of
-            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">
+          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-8" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.9)' }}>
+            <span className="drop-shadow-2xl">Three Days of</span>
+            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent drop-shadow-2xl">
               Intensive Learning
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Immerse yourself in carefully crafted sessions designed to advance your data science skills 
-            and connect you with industry leaders.
-          </p>
+          <div className="bg-black/70 backdrop-blur-md rounded-2xl px-8 py-6 mb-12 max-w-4xl mx-auto shadow-2xl border border-white/20">
+            <p className="text-xl text-white font-medium leading-relaxed drop-shadow-lg">
+              Immerse yourself in carefully crafted sessions designed to advance your data science skills 
+              and connect you with industry leaders.
+            </p>
+          </div>
         </div>
-
-        {/* Day Selector */}
         <div className="flex flex-col sm:flex-row justify-center mb-12 space-y-4 sm:space-y-0 sm:space-x-4">
           {schedule.map((day, index) => (
             <button
@@ -313,8 +303,6 @@ const Schedule = () => {
             </button>
           ))}
         </div>
-
-        {/* Schedule Content */}
         <div className="max-w-4xl mx-auto">
           <div className="glass-effect rounded-3xl p-8 border border-white/20">
             <div className="text-center mb-8">
@@ -323,7 +311,6 @@ const Schedule = () => {
               </h3>
               <p className="text-white/80">{schedule[activeDay].date}</p>
             </div>
-
             <div className="space-y-4">
               {schedule[activeDay].sessions.map((session, index) => (
                 <div
@@ -339,7 +326,6 @@ const Schedule = () => {
                         <div className={`w-12 h-12 bg-gradient-to-r ${getSessionTypeColor(session.type)} rounded-xl flex items-center justify-center text-white flex-shrink-0`}>
                           {getSessionIcon(session.type)}
                         </div>
-                        
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                             <h4 className="font-display font-bold text-lg text-white truncate">
@@ -354,7 +340,6 @@ const Schedule = () => {
                           </p>
                         </div>
                       </div>
-                      
                       <div className="ml-4 flex-shrink-0">
                         <svg
                           className={`w-5 h-5 text-white/60 transition-transform duration-300 ${
@@ -369,8 +354,6 @@ const Schedule = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Expanded Content */}
                   <div className={`transition-all duration-300 overflow-hidden ${
                     expandedSession === `${activeDay}-${index}` ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}>
@@ -393,8 +376,6 @@ const Schedule = () => {
             </div>
           </div>
         </div>
-
-        {/* Download Schedule CTA */}
         <div className="text-center mt-12">
           <button className="btn-primary">
             <span className="flex items-center justify-center">
@@ -409,5 +390,4 @@ const Schedule = () => {
     </section>
   );
 };
-
 export default Schedule;

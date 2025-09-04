@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const Registration = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -15,10 +14,8 @@ const Registration = () => {
     newsletter: true,
     terms: false
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
   const ticketTypes = [
     {
       id: 'early-bird',
@@ -68,7 +65,6 @@ const Registration = () => {
       available: true
     }
   ];
-
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
@@ -76,18 +72,13 @@ const Registration = () => {
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubmitting(false);
     setSubmitted(true);
   };
-
   if (submitted) {
     return (
       <section id="register" className="section-padding bg-gradient-to-br from-accent-50 to-primary-50">
@@ -118,7 +109,6 @@ const Registration = () => {
       </section>
     );
   }
-
   return (
     <section 
       id="register" 
@@ -130,38 +120,32 @@ const Registration = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-
-      
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow animate-float" style={{animationDelay: '2s'}}></div>
-        
-        {/* Additional floating elements */}
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute top-64 left-64 w-3 h-3 bg-secondary-400 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
       </div>
-
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white font-medium mb-6">
-            <span className="w-2 h-2 bg-accent-400 rounded-full mr-2"></span>
+          <div className="inline-flex items-center px-8 py-3 rounded-full bg-black/80 backdrop-blur-md border border-white/30 text-white font-semibold mb-8 shadow-2xl">
+            <span className="w-3 h-3 bg-accent-400 rounded-full mr-4 animate-pulse shadow-lg"></span>
             Join the Summit
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-6 text-shadow">
-            Secure Your
-            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">Learning Journey</span>
+          <h2 className="font-display font-bold text-4xl md:text-6xl text-white mb-8" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.9)' }}>
+            <span className="drop-shadow-2xl">Secure Your</span>
+            <span className="block bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent drop-shadow-2xl">Learning Journey</span>
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow">
-            Don't miss your chance to join the most comprehensive data science event. 
-            Choose your registration tier and accelerate your career.
-          </p>
+          <div className="bg-black/70 backdrop-blur-md rounded-2xl px-8 py-6 mb-12 max-w-4xl mx-auto shadow-2xl border border-white/20">
+            <p className="text-xl text-white font-medium leading-relaxed drop-shadow-lg">
+              Don't miss your chance to join the most comprehensive data science event. 
+              Choose your registration tier and accelerate your career.
+            </p>
+          </div>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {/* Ticket Options */}
           <div className="lg:col-span-1">
             <h3 className="font-display font-bold text-2xl text-gray-900 mb-6">Choose Your Ticket</h3>
             <div className="space-y-4">
@@ -184,7 +168,6 @@ const Registration = () => {
                       </span>
                     </div>
                   )}
-                  
                   {!ticket.available && (
                     <div className="absolute -top-3 right-4">
                       <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -192,7 +175,6 @@ const Registration = () => {
                       </span>
                     </div>
                   )}
-
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <h4 className="font-display font-bold text-xl text-gray-900">{ticket.name}</h4>
@@ -213,7 +195,6 @@ const Registration = () => {
                       )}
                     </div>
                   </div>
-
                   <ul className="space-y-2">
                     {ticket.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -228,14 +209,10 @@ const Registration = () => {
               ))}
             </div>
           </div>
-
-          {/* Registration Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
               <h3 className="font-display font-bold text-2xl text-gray-900 mb-6">Event Registration</h3>
-              
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Personal Information */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -266,7 +243,6 @@ const Registration = () => {
                     />
                   </div>
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -296,7 +272,6 @@ const Registration = () => {
                     />
                   </div>
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -325,8 +300,6 @@ const Registration = () => {
                     />
                   </div>
                 </div>
-
-                {/* Additional Information */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Dietary Restrictions
@@ -340,7 +313,6 @@ const Registration = () => {
                     placeholder="Please list any dietary restrictions or allergies..."
                   />
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -369,8 +341,6 @@ const Registration = () => {
                     />
                   </div>
                 </div>
-
-                {/* Checkboxes */}
                 <div className="space-y-4">
                   <label className="flex items-start space-x-3">
                     <input
@@ -384,7 +354,6 @@ const Registration = () => {
                       Subscribe to our newsletter for updates on future heroic events and exclusive content.
                     </span>
                   </label>
-
                   <label className="flex items-start space-x-3">
                     <input
                       type="checkbox"
@@ -399,8 +368,6 @@ const Registration = () => {
                     </span>
                   </label>
                 </div>
-
-                {/* Submit Button */}
                 <div className="pt-6">
                   <button
                     type="submit"
@@ -432,5 +399,4 @@ const Registration = () => {
     </section>
   );
 };
-
 export default Registration;
