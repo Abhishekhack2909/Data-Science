@@ -268,7 +268,7 @@ const Registration = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 8888888888"
                     />
                   </div>
                 </div>
@@ -283,7 +283,7 @@ const Registration = () => {
                       value={formData.organization}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors"
-                      placeholder="Google, Microsoft, University, etc."
+                      placeholder="vit etc."
                     />
                   </div>
                   <div>
@@ -296,7 +296,7 @@ const Registration = () => {
                       value={formData.role}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors"
-                      placeholder="Data Scientist, ML Engineer, Student, etc."
+                      placeholder="Data Scientist etc." 
                     />
                   </div>
                 </div>
@@ -337,7 +337,7 @@ const Registration = () => {
                       value={formData.emergencyPhone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 8888888888"
                     />
                   </div>
                 </div>
